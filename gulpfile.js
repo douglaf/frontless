@@ -67,15 +67,15 @@ gulp.task('build', function(){
     .pipe(gulp.dest('assets/'))
 })
 
-gulp.task('worker', function(){
-  return browserify({ entries: ['components/webworker/index.js'] })
-    .transform(babelify.configure({
-      presets: ["@babel/preset-env"]
-    }))
-    .bundle()
-    .pipe(source('worker.js'))
-    .pipe(gulp.dest('assets/'))
-})
+// gulp.task('worker', function(){
+//   return browserify({ entries: ['components/webworker/index.js'] })
+//     .transform(babelify.configure({
+//       presets: ["@babel/preset-env"]
+//     }))
+//     .bundle()
+//     .pipe(source('worker.js'))
+//     .pipe(gulp.dest('assets/'))
+// })
 
 gulp.task('boot', function(){
   return browserify({ entries: ['components/webworker/boot.js'] })
